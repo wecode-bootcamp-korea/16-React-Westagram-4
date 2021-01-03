@@ -1,12 +1,13 @@
 %flexCenter {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+    justify-content: center;
+    // border: 0 auto;
 }
 
 // sass 파일에서
 @import '../common.scss'
 
 .logo {
-	@extend %flexCenter
+	@extend %flexCent
 }
