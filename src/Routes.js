@@ -1,28 +1,41 @@
-// // 준식's 컴포넌트
-// import LoginSeonmi from './pages/seonmiJeong/Login/Login';
-// import MainSeonmi from './page/seonmiJeong/Main/Main';
+// 선미's 컴포넌트
+import LoginSeonmi from './pages/seonmiJeong/Login/Login';
+import MainSeonmi from './page/seonmiJeong/Main/Main';
 
-// // 종택's 컴포넌트
-// import loginBohyeon from './pages/bohyeonKoo/Login/Login';
-// import MainBohyeon from './pages/bohyeonKoo/Main/Main';
+// 보현's 컴포넌트
+import loginBohyeon from './pages/bohyeonKoo/Login/Login';
+import MainBohyeon from './pages/bohyeonKoo/Main/Main';
 
-// // 준식's 컴포넌트
-// import LoginKyuchan from './pages/kyuchanMun/Login/Login';
-// import MainKyuchan from './page/kyuchanMun/Main/Main';
+// 규찬's 컴포넌트
+import LoginKyuchan from './pages/kyuchanMun/Login/Login';
+import MainKyuchan from './page/kyuchanMun/Main/Main';
 
-// // 종택's 컴포넌트
-// import LoginJaeyoon from './pages/jaeyoonJeong/Login/Login';
-// import MainJaeyoon from './pages/jaeyoonJeong/Main/Main';
+// 재윤's 컴포넌트
+import LoginJaeyoon from './pages/jaeyoonJeong/Login/Login';
+import MainJaeyoon from './pages/jaeyoonJeong/Main/Main';
 
-// // import 한 컴포넌트에 대한 경로를 각각 설정해줍니다.
-// <Route exact path='/login-seonmi' component={LoginSeon} />
-// <Route exact path='/main-seonmi' component={MainSeon} />
+import React from 'react';
+import {BrowserRouter as Router,Switch,Route,} from 'react-router-dom';
 
-// <Route exact path='/login-bohyeon' component={LoginBo} />
-// <Route exact path='/main-bohyeon' component={MainBo} />
 
-// <Route exact path='/login-jaeyoon' component={LoginJae} />
-// <Route exact path='/main-jaeyoon' component={MainJae} />
+class Routes extends React.Component {
+    render() {
+    return (
+    <Router>
+        <Switch>
+            <Route exact path='/login-seonmi' component={LoginSeonmi} />
+            <Route exact path='/main-seonmi' component={MainSeonmi} />
+            <Route exact path='/login-bohyeon' component={LoginBohyun} />
+            <Route exact path='/main-bohyeon' component={MainBohyun} />
+            <Route exact path='/login-jaeyoon' component={LoginJaeyoon} />
+            <Route exact path='/main-jaeyoon' component={MainJaeyoon} />
+            <Route exact path='/login-kyuchan' component={LoginKyuchan} />
+            <Route exact path='/main-kyuchan' component={MainKyuchan} />
+        </Switch>
+    </Router>
+    )
+    }
+}
 
-// <Route exact path='/login-kyuchan' component={LoginKyu} />
-// <Route exact path='/main-kyuchan' component={MainKyu} />
+export default Routes;
+
