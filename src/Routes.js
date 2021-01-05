@@ -1,6 +1,6 @@
 // 선미's 컴포넌트
 import LoginSeonmi from './Pages/seonmiJeong/Login/Login';
-import MainSeonmi from './Page/seonmiJeong/Main/Main';
+import MainSeonmi from './Pages/seonmiJeong/Main/Main';
 
 // 보현's 컴포넌트
 import LoginBohyeon from './Pages/bohyeonKoo/Login/Login';
@@ -8,7 +8,7 @@ import MainBohyeon from './Pages/bohyeonKoo/Main/Main';
 
 // 규찬's 컴포넌트
 import LoginKyuchan from './Pages/kyuchanMun/Login/Login';
-import MainKyuchan from './Page/kyuchanMun/Main/Main';
+import MainKyuchan from './Pages/kyuchanMun/Main/Main';
 
 // 재윤's 컴포넌트
 import LoginJaeyoon from './Pages/jaeyoonJeong/Login/Login';
