@@ -5,5 +5,5 @@ import reportWebVitals from './reportWebVitals';
 import './Styles/common.scss';
 import './Styles/reset.scss';
 
-ReactDOM.render(<Routes />, document.getElementById('root'));
+ReactDOM.render(<Routes />, document.getElementById('root'))
 reportWebVitals();
