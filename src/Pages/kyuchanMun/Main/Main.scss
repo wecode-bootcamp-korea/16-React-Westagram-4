@@ -1,0 +1,39 @@
+.Main{
+  nav{
+    display:flex;
+    border-bottom: 1px solid gray;
+    height : 60px;
+    padding : 0 700px;   
+    .nav_wrap{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      width:100%;      
+    }
+        .nav_westagram{
+        font-size : 40px;
+        color : navy;
+      
+    }
+        .nav_input{
+        height: 20px;
+        width : 200px;
+        border : 1.5px solid black;
+        border-radius: 3px;
+    }
+        .nav_img{
+          display: flex;
+          
+        }
+
+  }
+
+
+
+
+
+
+ 
+}
