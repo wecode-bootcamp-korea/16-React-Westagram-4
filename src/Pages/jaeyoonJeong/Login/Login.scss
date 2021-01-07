@@ -40,6 +40,9 @@ main {
     border-radius: 5px;
     background-color: #C0DFFD;
     color: white;
+        &.active{
+            background-color: #055cb1;
+        }
     }
     }
 
