@@ -26,7 +26,18 @@ class LoginSeonmi extends React.Component {
         })
     }
 
-
+    handleButton = () => {
+        console.log("버튼 연결학인")
+        /*fetch("api주소", {
+            method: "POST",
+            body: JSON.stringify({
+                email: this.state.id,
+                password: this.state.pw,
+            }),
+        })
+            .then((response) => response.json())
+            .then((result) => console.log("결과: ", result ));*/
+    }
 
     render() {
         return (
@@ -37,7 +48,7 @@ class LoginSeonmi extends React.Component {
                             <input className ="IdInput" onChange={this.handleIdInput} type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/>
                             <input className="PasswordInput" onChange={this.handlePwInput} type="password" placeholder="비밀번호"/>
                             <Link to="/main-seonmi" style={{textDecoration: 'none'}}>
-                                <button className={this.state.classname} /*style={{ backgroundColor: this.state.color}}*/>로그인</button>
+                                <button className={this.state.classname} onClick={this.handleButton}>로그인</button>
                             </Link>
                         </main>
                 
