@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import CommentFormat from './Comment/CommentFormat';
+//import COMMENT from './commentData'; 목데이터에 있던거 어떻게 처리?
 import './Main.scss';
 
 
 
 class MainSeonmi extends Component {
     constructor() {
+        console.log("constructor 검사")
         super();
         this.state= {
             comments: [],
@@ -12,11 +15,11 @@ class MainSeonmi extends Component {
         };
     }
 
-    changeHandler = (event) => {
+    /*componentDidMount() {
         this.setState({
-            comment: event.target.value
+            comments: COMMENT
         });
-    };
+    }*/
 
     clickHandler = () => {
         let comments = this.state.comments
@@ -29,8 +32,8 @@ class MainSeonmi extends Component {
         e.keyCode === 13 && this.clickHandler()
     }
 
-
     render() {
+        console.log("state 검사", this.state) //지우기
         return (
             <div className="main">
                 <nav>
@@ -67,7 +70,7 @@ class MainSeonmi extends Component {
                                     <div className="publisherComment"><span className="nickname">Nickname</span> what i have to say..?</div>
                                     <div className="updatedComments">
                                         <ul className="commentUl">
-                                            {/* <CommentFormat commentsArr = {this.state.comments} /> */}
+                                            <CommentFormat commentsArr = {this.state.comments} />
                                         </ul>
                                     </div>
 
