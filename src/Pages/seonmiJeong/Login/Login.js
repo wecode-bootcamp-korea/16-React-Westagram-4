@@ -16,6 +16,13 @@ class LoginSeonmi extends Component {
 
     // 1) 사용자가 입력한 id, pw 데이터 저장 >>> state
     // handleIdInput & handlePwInput 코드 합쳐보기
+
+    handleInput = (e) => {
+        const inputName = e.target.name;
+        const inputValue = e.target.value;
+        this.setState({ [inputName]: inputValue}, () => this.checkBtnState());
+    }
+
     handleIdInput = (event) => {
         this.setState({
             IdValue: event.target.value,

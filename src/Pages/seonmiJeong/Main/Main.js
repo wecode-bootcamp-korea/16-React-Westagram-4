@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import CommentFormat from './Comment/CommentFormat';
-//import COMMENT from './commentData'; 목데이터에 있던거 어떻게 처리?
+//import COMMENT from './commentData'; 목데이터에서 사용 안하면 삭제하기
 import './Main.scss';
 
 
 
 class MainSeonmi extends Component {
     constructor() {
-        console.log("constructor 검사")
         super();
         this.state= {
             comments: [],
@@ -21,6 +20,12 @@ class MainSeonmi extends Component {
         });
     }*/
 
+    changeHandler = (event) => {
+        this.setState({
+            comment: event.target.value
+        });
+    };
+
     clickHandler = () => {
         let comments = this.state.comments
         let comment = this.state.comment
@@ -33,7 +38,7 @@ class MainSeonmi extends Component {
     }
 
     render() {
-        console.log("state 검사", this.state) //지우기
+        const {comments} = this.state;
         return (
             <div className="main">
                 <nav>
@@ -70,7 +75,7 @@ class MainSeonmi extends Component {
                                     <div className="publisherComment"><span className="nickname">Nickname</span> what i have to say..?</div>
                                     <div className="updatedComments">
                                         <ul className="commentUl">
-                                            <CommentFormat commentsArr = {this.state.comments} />
+                                            <CommentFormat commentsArr={comments} />
                                         </ul>
                                     </div>
 
